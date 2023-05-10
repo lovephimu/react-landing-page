@@ -1,3 +1,16 @@
+// VARIABLES
+
+$backgroundColorWhite: #ffffff;
+$backgroundColorPeach: #fdf2ec;
+$backgroundColorBlue: #ecf7fd;
+$backgroundColorDarkBlue: #b4dcfa;
+
+$frameColorOrange: #ff6928;
+$frameColorGrey: #ececec;
+$frameColorPurple: #e3b4fa;
+$frameColorDark: #222222;
+$frameColorPeach: #ffcd9f;
+
 // LINKS
 .flexHeaderItems {
   font-weight: 500;
@@ -43,8 +56,6 @@
   color: #ffffff;
 }
 
-// ids
-
 // ELEMENTS
 
 body {
@@ -55,23 +66,24 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: center;
   width: 100%;
+  background-color: #ffffff;
 }
 
 // CLASSES
 
 .flexHeaderMenu {
   display: flex;
-  width: 100%;
-  max-width: 1280;
-  justify-content: center;
+  width: 1280px;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  background-color: #ffffff;
 }
 
 .flexHeaderItems:nth-last-child(2) {
-  margin-left: 42px;
+  margin-left: 52px;
 }
 
 .flexImage {
@@ -79,5 +91,44 @@ header {
 }
 
 .flexImage:last-of-type {
-  margin-right: 42px;
+  margin-right: 52px;
+}
+
+.mottoCard {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto;
+  justify-content: center;
+  width: 80%;
+  max-width: 1280px;
+  place-items: center;
+  margin: 80px 0 80px 0;
+}
+
+.mottoItem {
+  max-width: 760px;
+  font-size: 48px;
+  justify-self: left;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.white {
+  background-color: $backgroundColorWhite;
+}
+
+.blue {
+  background-color: $backgroundColorBlue;
+}
+
+.darkBlue {
+  background-color: $backgroundColorDarkBlue;
+}
+
+.dark {
+  background-color: $frameColorDark;
 }
