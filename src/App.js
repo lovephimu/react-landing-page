@@ -78,7 +78,10 @@ export default function App() {
           </a>
         </div>
       </header>
-      <section className={`${styles.flexContainer} ${styles.big}`}>
+      <section
+        className={`${styles.flexContainer} ${styles.big}`}
+        style={{ paddingTop: '80px' }}
+      >
         <div className={`${styles.mottoCard}  ${styles.title}`}>
           <div className={`${styles.contentFlex} ${styles.mottoItem}`}>
             <div style={{ width: '100%' }}>
@@ -176,9 +179,23 @@ export default function App() {
       <section
         className={`${styles.flexContainer} ${styles.flexDirectionColumn} ${styles.white}`}
       >
-        <h1 className={styles.title}>Benefits of RPC Fast API</h1>
+        <h1
+          className={styles.title}
+          style={{
+            position: 'sticky',
+            top: '80px',
+          }}
+        >
+          Benefits of RPC Fast API
+        </h1>
         <div
           className={`${styles.mottoCard} ${styles.fancyBox} ${styles.frameBlue} ${styles.boxBackgroundBlue} ${styles.mottoItemShrink}`}
+          style={{
+            position: 'sticky',
+            top: '150px',
+            zIndex: '0',
+            maxWidth: '950px',
+          }}
         >
           <Rabbit className={styles.mottoImage} />
           <div>
@@ -197,49 +214,74 @@ export default function App() {
           </div>
         </div>
         <div
-          className={`${styles.mottoCard} ${styles.fancyBox} ${styles.framePurple} ${styles.boxBackgroundPurple} ${styles.mottoItemShrink}`}
+          style={{
+            position: 'sticky',
+            top: '130px',
+          }}
         >
-          <Lock className={styles.mottoImage} />
-          <div>
-            <h2 className={styles.mottoItem}>Enterprise-grade security</h2>
-            <p>
-              We can protect the nodes from attacks on DNS and domain registrar
-              servers:
-            </p>
-            <ul>
-              <li className={styles.liPurpleBullet}>
-                Use JSON Web Token (JWT).
-                <br />
-                <span style={{ fontWeight: '400' }}>
-                  Available for Enterprise plan.
-                </span>
-              </li>
-              <li className={styles.liPurpleBullet}>Use ETH domain name</li>
-            </ul>
+          <div
+            className={`${styles.mottoCard} ${styles.fancyBox} ${styles.framePurple} ${styles.boxBackgroundPurple} ${styles.mottoItemShrink}`}
+            style={{
+              zIndex: '1',
+              width: '950px',
+              position: 'relative',
+              left: '300px',
+            }}
+          >
+            <Lock className={styles.mottoImage} />
+            <div>
+              <h2 className={styles.mottoItem}>Enterprise-grade security</h2>
+              <p>
+                We can protect the nodes from attacks on DNS and domain
+                registrar servers:
+              </p>
+              <ul>
+                <li className={styles.liPurpleBullet}>
+                  Use JSON Web Token (JWT).
+                  <br />
+                  <span style={{ fontWeight: '400' }}>
+                    Available for Enterprise plan.
+                  </span>
+                </li>
+                <li className={styles.liPurpleBullet}>Use ETH domain name</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div
-          className={`${styles.mottoCard} ${styles.fancyBox} ${styles.frameOrangeLight} ${styles.boxBackgroundOrange} ${styles.mottoItemShrink}`}
+          style={{
+            position: 'sticky',
+            top: '100px',
+          }}
         >
-          <Eye className={styles.mottoImage} />
-          <div>
-            <h2 className={styles.mottoItem}>
-              Autoscalable and reliable infrastructure
-            </h2>
-            <p>
-              Meet <a className={styles.flowLink}>PredictKube</a>, an AI model
-              trained to predict the traffic trend and autoscale infrastructure
-              capacities accordingly:
-            </p>
-            <ul>
-              <li className={styles.liPeachBullet}>
-                It works based on your historical data and business metrics.
-              </li>
-              <li className={styles.liPeachBullet}>
-                PredictKube autoscales the node pool to keep your project always
-                up and capable of dealing with any traffic.
-              </li>
-            </ul>
+          <div
+            className={`${styles.mottoCard} ${styles.fancyBox} ${styles.frameOrangeLight} ${styles.boxBackgroundOrange} ${styles.mottoItemShrink}`}
+            style={{
+              position: 'relative',
+              zIndex: '2',
+              Width: '900px',
+            }}
+          >
+            <Eye className={styles.mottoImage} />
+            <div>
+              <h2 className={styles.mottoItem}>
+                Autoscalable and reliable infrastructure
+              </h2>
+              <p>
+                Meet <a className={styles.flowLink}>PredictKube</a>, an AI model
+                trained to predict the traffic trend and autoscale
+                infrastructure capacities accordingly:
+              </p>
+              <ul>
+                <li className={styles.liPeachBullet}>
+                  It works based on your historical data and business metrics.
+                </li>
+                <li className={styles.liPeachBullet}>
+                  PredictKube autoscales the node pool to keep your project
+                  always up and capable of dealing with any traffic.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -314,7 +356,9 @@ export default function App() {
             <ColorEthereum className={styles.logoMargin} />
             <div>
               <h2>Ethereum API</h2>
-              <a href="/#">See details</a>
+              <a className={styles.flowLink} href="/#">
+                See details
+              </a>
             </div>
           </div>
           <div
@@ -323,7 +367,9 @@ export default function App() {
             <ColorBnb className={styles.logoMargin} />
             <div>
               <h2>BNB Chain API</h2>
-              <a href="/#">See details</a>
+              <a className={styles.flowLink} href="/#">
+                See details
+              </a>
             </div>
           </div>
           <div
@@ -332,7 +378,9 @@ export default function App() {
             <ColorPolygon className={styles.logoMargin} />
             <div>
               <h2>Polygon API</h2>
-              <a href="/#">See details</a>
+              <a className={styles.flowLink} href="/#">
+                See details
+              </a>
             </div>
           </div>
           <div
@@ -341,7 +389,9 @@ export default function App() {
             <ColorVelas className={styles.logoMargin} />
             <div>
               <h2>Velas API</h2>
-              <a href="/#">See details</a>
+              <a className={styles.flowLink} href="/#">
+                See details
+              </a>
             </div>
           </div>
         </div>
