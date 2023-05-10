@@ -6,10 +6,18 @@ $backgroundColorBlue: #ecf7fd;
 $backgroundColorDarkBlue: #b4dcfa;
 
 $frameColorOrange: #ff6928;
+$frameColorOrangeLight: #ffcd9f;
 $frameColorGrey: #ececec;
 $frameColorPurple: #e3b4fa;
 $frameColorDark: #222222;
 $frameColorPeach: #ffcd9f;
+$frameColorBlue: #b4dcfa;
+
+$frameBackgroundWhite: #ffffff;
+$frameBackgroundBlue: #ecf7fd;
+$frameBackgroundPurple: #f8f3ff;
+$frameBackgroundOrange: #fdf2ec;
+$frameBackgroundGrey: #cbe7fc;
 
 // LINKS
 .flexHeaderItems {
@@ -135,6 +143,7 @@ header {
 
 .dark {
   background-color: $frameColorDark;
+  color: #ffffff;
 }
 h1 {
   font-size: 42px;
@@ -144,4 +153,60 @@ h1 {
 h2 {
   font-size: 28px;
   font-weight: 700;
+}
+
+// FANCY BOXES
+
+.fancyBox {
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 46px;
+  border-color: $frameColorDark;
+  padding: 50px;
+  box-shadow: 4px 4px 0 $frameColorDark;
+}
+
+.framePurple {
+  border-color: $frameColorPurple;
+  box-shadow: 4px 4px 0 $frameColorPurple;
+}
+.framePeach {
+  border-color: $frameColorPeach;
+  box-shadow: 4px 4px 0 $frameColorPeach;
+}
+.frameBlue {
+  border-color: $frameColorBlue;
+  box-shadow: 4px 4px 0 $frameColorBlue;
+}
+.frameGrey {
+  border-color: $frameColorGrey;
+  box-shadow: 4px 4px 0 $frameColorGrey;
+}
+.frameOrange {
+  border-color: $frameColorOrange;
+  box-shadow: 4px 4px 0 $frameColorOrange;
+}
+.frameOrangeLight {
+  border-color: $frameColorOrangeLight;
+  box-shadow: 4px 4px 0 $frameColorOrangeLight;
+}
+
+.boxBackgroundWhite {
+  background-color: $frameBackgroundWhite;
+}
+.boxBackgroundBlue {
+  background-color: $frameBackgroundBlue;
+}
+.boxBackgroundPurple {
+  background-color: $frameBackgroundPurple;
+}
+.boxBackgroundOrange {
+  background-color: $frameBackgroundOrange;
+}
+.boxBackgroundGrey {
+  background-color: $frameBackgroundGrey;
+}
+.boxBackgroundDark {
+  background-color: $frameColorDark;
+  color: #ffffff;
 }
