@@ -107,14 +107,18 @@ header {
 
 .mottoItem {
   max-width: 760px;
-  font-size: 48px;
   justify-self: left;
 }
 
 .flexContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
+}
+
+.flexDirectionColumn {
+  flex-direction: column;
 }
 
 .white {
@@ -131,4 +135,13 @@ header {
 
 .dark {
   background-color: $frameColorDark;
+}
+h1 {
+  font-size: 42px;
+  font-weight: 500;
+}
+// fonts
+h2 {
+  font-size: 28px;
+  font-weight: 700;
 }
