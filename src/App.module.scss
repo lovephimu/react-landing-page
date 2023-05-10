@@ -38,16 +38,16 @@ $frameBackgroundGrey: #cbe7fc;
 
 .linkButton {
   font-weight: 600;
-  border: solid 2px #ff8540;
+  border: solid 2px $frameColorOrange;
   border-radius: 8px;
-  background-color: #ff8640;
+  background-color: $frameColorOrange;
   transition: border 0.1s ease-in-out, background-color 0.1s ease-in-out;
   color: #ffffff;
 }
 
 .linkButton:hover {
-  background-color: #ff9f68;
-  border: solid 2px #ff9f68;
+  background-color: $frameColorOrangeLight;
+  border: solid 2px $frameColorOrangeLight;
 }
 
 .logIn {
@@ -64,8 +64,69 @@ $frameBackgroundGrey: #cbe7fc;
   color: #ffffff;
 }
 
+.flowLink {
+  color: $frameColorOrange;
+}
+
+.flowLink:hover {
+  text-decoration: underline;
+}
+
+.flowLinkDark {
+  color: $frameColorDark;
+  transition: color 0.5s ease-in-out;
+}
+
+.flowLinkDark:hover {
+  text-decoration: underline;
+  color: $frameColorOrange;
+}
+
+li.linkBar {
+  color: #ffffff;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.linkBright {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+a.linkBright {
+  color: #ffffff;
+  transition: color 0.5s ease-in-out;
+}
+
+a.linkBright:hover {
+  text-decoration: underline;
+  color: $frameColorOrange;
+}
+
+a.linkGrey {
+  color: #9f9f9f;
+  transition: color 0.25s ease-in-out;
+}
+
+a.linkGrey:hover {
+  text-decoration: underline;
+  color: $frameColorOrange;
+}
+
 // ELEMENTS
 
+section {
+  padding-bottom: 100px;
+}
+
+footer {
+  padding-bottom: 50px;
+}
 body {
   margin: 0;
   padding: 0;
@@ -78,6 +139,35 @@ header {
   justify-content: center;
   width: 100%;
   background-color: #ffffff;
+  position: fixed;
+  z-index: 3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 12px;
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  font-weight: 500;
+  border-left: 2px solid;
+  border-color: $frameColorBlue;
+}
+
+.liPurpleBullet {
+  border-color: $frameColorPurple;
+}
+
+.liPeachBullet {
+  border-color: $frameColorPeach;
+}
+
+.title {
+  margin-top: 120px;
 }
 
 // CLASSES
@@ -110,12 +200,20 @@ header {
   width: 80%;
   max-width: 1280px;
   place-items: center;
-  margin: 80px 0 80px 0;
+  margin: 80px 0 40px 0;
 }
 
 .mottoItem {
   max-width: 760px;
   justify-self: left;
+}
+
+.mottoItemShrink {
+  width: 70%;
+}
+
+.mottoImage {
+  margin-right: 80px;
 }
 
 .flexContainer {
@@ -125,8 +223,60 @@ header {
   width: 100%;
 }
 
+.flexItemBox {
+  display: flex;
+  margin: 20px;
+}
+
+.flexItemBoxSmall {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
 .flexDirectionColumn {
   flex-direction: column;
+}
+
+.contentFlex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.contentItem {
+  margin-right: 16px;
+}
+
+.contentAlign {
+  display: flex;
+  align-items: center;
+}
+
+.gridThreeFr {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  max-width: 1280px;
+  justify-items: center;
+  gap: 15px;
+  width: 70%;
+}
+
+.gridItem {
+  height: auto;
+  width: 90%;
+  max-width: 350px;
+}
+
+.gridFourFr {
+  display: grid;
+  grid-template-columns: repeat(5, 1Fr);
+  max-width: 1280px;
+  justify-items: center;
+  gap: 15px;
+  width: 70%;
 }
 
 .white {
@@ -155,15 +305,107 @@ h2 {
   font-weight: 700;
 }
 
+.firmName {
+  font-size: 22px;
+}
+
+.highLightPurple {
+  border-color: $frameColorPurple;
+  border-style: solid;
+  background-color: $frameColorPurple;
+  border-radius: 10px;
+  padding: 0 8px 0 8px;
+}
+
+.highLightOrange {
+  border-color: $frameColorOrangeLight;
+  border-style: solid;
+  background-color: $frameColorOrangeLight;
+  border-radius: 10px;
+  padding: 0 8px 0 8px;
+}
+
+.highLightBlue {
+  border-color: $frameColorBlue;
+  border-style: solid;
+  background-color: $frameColorBlue;
+  border-radius: 10px;
+  padding: 0 8px 0 8px;
+}
+
+.highLightDark {
+  border-color: $frameColorDark;
+  border-style: solid;
+  background-color: $frameColorDark;
+  border-radius: 10px;
+  padding: 0 8px 0 8px;
+  color: #ffffff;
+}
+
+.punchText {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.punchTextSmall {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1280px;
+  flex-direction: column;
+}
+
+.greyText {
+  color: #747d85;
+  margin-right: 40px;
+}
+
+.smallText {
+  font-size: 12px;
+}
+
+// Images
+
+.logoSpace {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+.logoMargin {
+  margin-right: 16px;
+  width: 42px;
+}
+
+.logoGrey {
+  margin: 0;
+  padding: 0;
+}
+
 // FANCY BOXES
+
+.structureBox {
+  width: 30%;
+  padding: 20px;
+  line-height: 1.5;
+}
 
 .fancyBox {
   border-width: 3px;
   border-style: solid;
-  border-radius: 46px;
   border-color: $frameColorDark;
+  border-radius: 46px;
   padding: 50px;
   box-shadow: 4px 4px 0 $frameColorDark;
+  box-sizing: border-box;
+}
+.big {
+  padding-bottom: 80px;
 }
 
 .framePurple {
@@ -190,6 +432,11 @@ h2 {
   border-color: $frameColorOrangeLight;
   box-shadow: 4px 4px 0 $frameColorOrangeLight;
 }
+.noFrame {
+  border-color: #00000000;
+  box-shadow: none;
+  border-radius: 16px;
+}
 
 .boxBackgroundWhite {
   background-color: $frameBackgroundWhite;
@@ -209,4 +456,13 @@ h2 {
 .boxBackgroundDark {
   background-color: $frameColorDark;
   color: #ffffff;
+}
+
+.lessPadding {
+  padding: 24px;
+}
+
+.smallerText {
+  font-size: 22px;
+  font-weight: 700;
 }
