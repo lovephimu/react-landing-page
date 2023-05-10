@@ -525,7 +525,7 @@ export default function App() {
         style={{ paddingTop: '50px' }}
       >
         <div className={styles.gridFourFr}>
-          <div style={{ gridColumn: 'span 2', justifySelf: 'left' }}>
+          <div style={{ gridColumn: 'span 3', justifySelf: 'left' }}>
             <LogoMain className={styles.flexImage} />
             <LogoSide className={styles.flexImage} />
           </div>
@@ -598,16 +598,11 @@ export default function App() {
               </li>
             </ul>
           </div>
-        </div>
-        <div
-          className={styles.contentFlex}
-          style={{
-            maxWidth: '1280',
-            marginTop: '50px',
-            justifyContent: 'space-between',
-          }}
-        >
-          <div className={styles.contentFlex} style={{ width: '60%' }}>
+
+          <div
+            className={styles.contentFlex}
+            style={{ gridColumn: 'span 3', justifyContent: 'space-between' }}
+          >
             <div>
               <a className={styles.linkGrey} href="/#">
                 Tallinn, Vesivärava str 50-201, 10152, Estonia
@@ -634,7 +629,7 @@ export default function App() {
               </a>
             </div>
           </div>
-          <div>
+          <div style={{ gridColumn: 'span 3', justifySelf: 'right' }}>
             <Twitter className={styles.logoMargin} />
             <GitHub className={styles.logoMargin} />
             <Medium className={styles.logoMargin} />
