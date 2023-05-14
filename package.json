@@ -2,7 +2,7 @@
   "name": "react-landing-page",
   "version": "0.1.0",
   "private": true,
-  "main": "src/App.js",
+  "main": "src/index.js",
   "dependencies": {
     "@upleveled/react-scripts": "5.0.11",
     "react": "^18.2.0",
