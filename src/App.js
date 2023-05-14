@@ -33,15 +33,6 @@ import { ReactComponent as Medium } from './pics/socialMedium.svg';
 import { ReactComponent as Reddit } from './pics/socialReddit.svg';
 import { ReactComponent as Twitter } from './pics/socialTwitter.svg';
 
-// import { ReactComponent as FirmNansen } from './pics/firm_nansen.svg';
-// import { ReactComponent as FirmSnyc } from './pics/firm_zkSync.svg';
-// import { ReactComponent as FirmRarify } from './pics/firm_Rarify.svg';
-// import { ReactComponent as UserA } from './pics/user1.png';
-// import { ReactComponent as UserB } from './pics/user2.png';
-// import { ReactComponent as UserC } from './pics/user3.png';
-// import { ReactComponent as UserD } from './pics/user4.png';
-// import { ReactComponent as UserClutch } from './pics/userClutch.svg';
-
 export default function App() {
   return (
     <>
